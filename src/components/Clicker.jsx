@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import styles from '../components/Clicker.module.css'
 import img from '/public/cookie-1.png';
 
 
@@ -9,9 +10,9 @@ const Clicker = () => {
 
     return (
         <>
-        <p>Clicker</p>
+        <p className={styles.title}>Clicker</p>
         <div>
-            <p>Score: {score}</p>
+            <p className={styles.score}>Score: {score}</p>
             <button onClick={() => setScore(score + 1)}>
                 <img src={img} alt="Cookie" />
             </button>
