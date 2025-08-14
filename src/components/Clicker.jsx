@@ -9,7 +9,7 @@ const Clicker = () => {
     const [score, setScore] = useState(0);
 
     return (
-        <>
+        <section>
         <p className={styles.title}>Clicker</p>
         <div>
             <p className={styles.score}>Score: {score}</p>
@@ -17,7 +17,7 @@ const Clicker = () => {
                 <img src={img} alt="Cookie" />
             </button>
         </div>
-        </>
+        </section>
     );
 };
 
