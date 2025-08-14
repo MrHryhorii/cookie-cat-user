@@ -1,6 +1,7 @@
 import React from 'react'
 import Clicker from './components/Clicker'
 import Cat from './components/Cat'
+import User from './components/User';
 //import './App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
       <Clicker />
       <Cat />
+      <User />
     </>
   );
 };
