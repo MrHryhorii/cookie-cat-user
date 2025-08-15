@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import styles from '../components/Clicker.module.css'
-import img from '/public/cookie-1.png';
+import img from '/src/assets/cookie-1.png';
 
 
 const Clicker = () => {

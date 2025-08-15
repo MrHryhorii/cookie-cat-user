@@ -12,6 +12,45 @@ const User = () => {
 
     const [userdata, setUserdata] = useState(mockData);
 
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+
+    // process on input change
+    const handleChange = (event, setter) => {
+        setter(event.target.value);
+    };
+    // process on button click
+    const addUser = () => {
+        // check if we have data
+        if (username && email) {
+            // create new data for "userdata"
+            const newUser = {
+                username: username,
+                email: email
+            };
+            // new array from old array data and new data
+            setUserdata(prevArray => [...prevArray, newUser]); 
+            // reset input data
+            setUsername("");
+            setEmail("");
+        }
+        else
+        {
+            if(!username)
+            {
+                alert("Input Username!");
+            }
+            else if(!email)
+            {
+                alert("Input Email!");
+            }
+            else
+            {
+                alert("Input Username and Email!");
+            }
+        };
+    };
+
     return (
         <section>
             <p>Users</p>
@@ -25,13 +64,27 @@ const User = () => {
             <form>
                 <label>
                     Username:
-                    <input type="text" name="username" />
+                    <input 
+                        type="text"
+                        name="username"
+                        value={username}
+                        onChange={(e) => handleChange(e, setUsername)}
+                    />
                 </label>
                 <label>
-                    Password:
-                    <input type="email" name="email" />
+                    Email:
+                    <input 
+                        type="email" 
+                        name="email" 
+                        value={email}
+                        onChange={(e) => handleChange(e, setEmail)}
+                    />
                 </label>
-                <input type="submit" value="Add" />
+                <input
+                    type="button"
+                    value="Add" 
+                    onClick={addUser}
+                />
             </form>
         </section>
     )
