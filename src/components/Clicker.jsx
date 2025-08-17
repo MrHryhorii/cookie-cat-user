@@ -9,11 +9,10 @@ const Clicker = () => {
 
     return (
         <section>
-        <p className={styles.title}>Clicker</p>
-        <div>
-            <p className={styles.score}>Score: {score}</p>
-            <button onClick={() => setScore(score + 1)}>
-                <img src="/cookie-1.png" alt="Image of a Cookie" />
+        <div className={styles.wrap}>
+            <p className={styles.counter}>Score: {score}</p>
+            <button className={styles.cookieBtn} onClick={() => setScore(score + 1)}>
+                <img className={styles.img} src="/cookie.png" alt="Image of a Cookie" />
             </button>
         </div>
         </section>

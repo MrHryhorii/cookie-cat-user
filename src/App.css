@@ -1,42 +1,61 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app{
+  max-width:1100px;
+  margin:0 auto;
+  padding:24px 16px
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.appTitle{
+  margin:0 0 8px;
+  font-size:28px
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sections{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.card{
+  flex:1 1 320px;
+  min-width:280px;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  background:#fff
 }
 
-.card {
-  padding: 2em;
+.cardTitle{
+  margin:0;
+  font-size:20px
 }
 
-.read-the-docs {
-  color: #888;
+.cardHint{
+  margin:-2px 0 4px;
+  color:#6b7280;
+  font-size:14px
+}
+
+.list{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:8px
+}
+
+.inputRow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap
+}
+
+.input{
+  flex:1 1 220px;
+  min-width:200px;
+  padding:10px 12px;
+  border:1px solid #e5e7eb;
+  border-radius:10px
 }

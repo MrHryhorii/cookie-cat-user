@@ -29,12 +29,13 @@ const Cat = () => {
 
     return (
         <section>
-        <p className={styles.title}>Cat</p>
-        <ul>
-            {facts.map((fact, i) => (
-                <li key={i}>{fact.fact}</li>
-            ))}
-        </ul>
+        <div className={styles.wrap}>
+            <ul className={styles.list}>
+                {facts.map((fact, i) => (
+                    <li className={styles.item} key={i}>{fact.fact}</li>
+                ))}
+            </ul>
+        </div>
         </section>
     )
 }

@@ -1,11 +1,24 @@
-img{
-    width: 300px;
+.wrap{
+    display:flex;
+    flex-direction:column;
+    gap:12px
 }
 
-.title{
-    font-size: 2rem;
+.state{
+    color:#6b7280
 }
 
-.score{
-    font-size: 1.5rem;
+.list{
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:grid;
+    gap:8px
+}
+
+.item{
+    padding:10px 12px;
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+    background:#fff
 }

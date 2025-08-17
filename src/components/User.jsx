@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import styles from '../components/User.module.css'
 
 const mockData = [
     { username: 'Ola Normann', email: 'ola.normann@norge.no'},
@@ -58,18 +59,22 @@ const User = () => {
 
     return (
         <section>
-            <p>Users</p>
-            <ul>
+            <div className={styles.wrap}>
+            <ul className={styles.list}>
                 {
-                    userdata.map((user, i) => (
-                        <li key={i}>{user.username} — {user.email}</li>
+                    userdata.map((user) => (
+                        <li className={styles.item} key={user.email}>
+                            <span className={styles.name}>{user.username}</span>
+                            <span className={styles.email}> — {user.email}</span>
+                        </li>
                     ))
                 }
             </ul>
-            <form>
+            <form className={styles.form}>
                 <label>
                     Username:
                     <input 
+                        className={styles.input}
                         type="text"
                         name="username"
                         value={username}
@@ -79,6 +84,7 @@ const User = () => {
                 <label>
                     Email:
                     <input 
+                        className={styles.input}
                         type="email" 
                         name="email" 
                         value={email}
@@ -91,6 +97,7 @@ const User = () => {
                     onClick={addUser}
                 />
             </form>
+            </div>
         </section>
     )
 }
