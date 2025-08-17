@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 import styles from '../components/Clicker.module.css'
-import img from '/src/assets/cookie-1.png';
 
 
 const Clicker = () => {
@@ -14,7 +13,7 @@ const Clicker = () => {
         <div>
             <p className={styles.score}>Score: {score}</p>
             <button onClick={() => setScore(score + 1)}>
-                <img src={img} alt="Cookie" />
+                <img src="/cookie-1.png" alt="Image of a Cookie" />
             </button>
         </div>
         </section>

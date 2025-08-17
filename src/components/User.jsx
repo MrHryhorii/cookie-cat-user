@@ -23,6 +23,11 @@ const User = () => {
     const addUser = () => {
         // check if we have data
         if (username && email) {
+            // check unique email
+            if (userdata.some(u => u.email === email)) {
+                alert("Email already exists");
+                return;
+            }
             // create new data for "userdata"
             const newUser = {
                 username: username,
@@ -57,7 +62,7 @@ const User = () => {
             <ul>
                 {
                     userdata.map((user, i) => (
-                        <li key={i}>{user.username}</li>
+                        <li key={i}>{user.username} — {user.email}</li>
                     ))
                 }
             </ul>

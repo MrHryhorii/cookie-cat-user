@@ -10,18 +10,21 @@ const Cat = () => {
     
     useEffect(() => {
         fetch("https://catfact.ninja/facts?limit=5")
-        .then(res => res.json())
+        .then(res => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.json();
+        })
         .then(data => {
             setFacts(data.data);
             setLoading(false);
         })
         .catch(err => {
-            setError(`Error: ${err}`);
+            setError(`Error: ${err.message || err}`);
             setLoading(false);
         });
     }, []);
     
-    if (loading) return <p>Please wait...</p>;
+    if (loading) return <p>Loading...</p>;
     if (error) return <p>{error}</p>;
 
     return (
