@@ -13,7 +13,16 @@
 }
 
 .img{
-    width:220px
+    width:220px;
+    transition: transform 0.3s ease;
+}
+
+.img:hover{
+    transform: rotate(-15deg);
+}
+
+.img:active{
+    transform: scale(0.9)
 }
 
 .counter{

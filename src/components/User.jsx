@@ -60,43 +60,45 @@ const User = () => {
     return (
         <section>
             <div className={styles.wrap}>
-            <ul className={styles.list}>
-                {
-                    userdata.map((user) => (
-                        <li className={styles.item} key={user.email}>
-                            <span className={styles.name}>{user.username}</span>
-                            <span className={styles.email}> — {user.email}</span>
-                        </li>
-                    ))
-                }
-            </ul>
-            <form className={styles.form}>
-                <label>
-                    Username:
-                    <input 
-                        className={styles.input}
-                        type="text"
-                        name="username"
-                        value={username}
-                        onChange={(e) => handleChange(e, setUsername)}
+                <ul className={styles.list}>
+                    {
+                        userdata.map((user) => (
+                            <li className={styles.item} key={user.email}>
+                                <span className={styles.name}>{user.username}</span>
+                                <span>—</span>
+                                <span className={styles.email}>{user.email}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+                <form className={styles.form}>
+                    <label>
+                        Username:
+                        <input 
+                            className={styles.input}
+                            type="text"
+                            name="username"
+                            value={username}
+                            onChange={(e) => handleChange(e, setUsername)}
+                        />
+                    </label>
+                    <label>
+                        Email:
+                        <input 
+                            className={styles.input}
+                            type="email" 
+                            name="email" 
+                            value={email}
+                            onChange={(e) => handleChange(e, setEmail)}
+                        />
+                    </label>
+                    <input
+                        className={styles.button}
+                        type="button"
+                        value="Add" 
+                        onClick={addUser}
                     />
-                </label>
-                <label>
-                    Email:
-                    <input 
-                        className={styles.input}
-                        type="email" 
-                        name="email" 
-                        value={email}
-                        onChange={(e) => handleChange(e, setEmail)}
-                    />
-                </label>
-                <input
-                    type="button"
-                    value="Add" 
-                    onClick={addUser}
-                />
-            </form>
+                </form>
             </div>
         </section>
     )
