@@ -80,6 +80,7 @@ const User = () => {
                             name="username"
                             value={username}
                             onChange={(e) => handleChange(e, setUsername)}
+                            autoComplete="true"
                         />
                     </label>
                     <label>
@@ -90,6 +91,7 @@ const User = () => {
                             name="email" 
                             value={email}
                             onChange={(e) => handleChange(e, setEmail)}
+                            autoComplete="true"
                         />
                     </label>
                     <input
