@@ -1,12 +1,21 @@
-# React + Vite
+# Hooks Practice: Cookie • Cat • Users
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React app (Vite) to practice `useState` and `useEffect`. Includes three components:
 
-Currently, two official plugins are available:
+- **CookieClicker** — click the cookie button to increase a score (`useState`).
+- **CatFacts** — fetch 5 random cat facts from `https://catfact.ninja/facts?limit=5`
+  with loading/error/data states (`useEffect` + `fetch`).
+- **Users** — show initial users from `mockData` and add new users into local state (`useState`).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech
 
-## Expanding the ESLint configuration
+- React + Vite
+- Hooks: `useState`, `useEffect`
+- Fetch API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
